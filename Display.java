@@ -19,7 +19,7 @@ public class Display extends Canvas implements Runnable{
     private int[] pixels;
 
     public Display(){
-        Screen screen = new Screen(WIDTH, HEIGHT);
+        this.screen = new Screen(WIDTH, HEIGHT);
         img = new BufferedImage(WIDTH, HEIGHT, BufferedImage.TYPE_INT_RGB);
         pixels = ((DataBufferInt)img.getRaster().getDataBuffer()).getData();
     }
@@ -54,7 +54,6 @@ public class Display extends Canvas implements Runnable{
             createBufferStrategy(3);
             return;
         }
-
         screen.render();
 
         for(int i = 0; i <WIDTH * HEIGHT; i++){

@@ -6,9 +6,9 @@ public class Screen extends Render{
     public Screen(int width, int height){
         super(width, height);
         Random rand = new Random();
-        test = new Render(256, 256);
+        test = new Render(512, 512);
 
-        for(int i = 0; i <256 * 256; i++){
+        for(int i = 0; i <512 * 512; i++){
             test.pixels[i] = rand.nextInt();
         }
     }
